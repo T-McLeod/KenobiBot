@@ -52,4 +52,4 @@ async def here(ctx):
         print(time.asctime(time.localtime()) + ": \n" + str(tweets) + '\n' + str(videos))
         time.sleep(30)
 
-client.run('NTExNTgzOTY1NDEzMzc2MDAy.W-mvsg.FGpMaFT3R_PtEK4i4UTAa_0Bfc0')
+client.run($DiscordToken)
