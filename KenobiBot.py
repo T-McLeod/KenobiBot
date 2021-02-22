@@ -53,4 +53,4 @@ async def here(ctx):
         print(time.asctime(time.localtime()) + ": \n" + str(tweets) + '\n' + str(videos))
         time.sleep(30)
 
-client.run(token)
+client.run(ODEzMzI3NzcyMTUxODQwODE4.YDNsgw.0qXEQZFYUnSsHW4M4vdYONEg2jE)
