@@ -6,7 +6,7 @@ from discord.ext import commands
 import time
 import os
 
-
+token = $DISCORD_BOT_TOKEN
 
 twitterID = [
     612473, #BBC News
@@ -34,7 +34,6 @@ def sillyLogStuff():
 
 sillyLogStuff()
 client = commands.Bot(command_prefix = '$')
-token = os.getenv("DISCORD_BOT_TOKEN")
 
 @client.event
 async def on_ready():
