@@ -6,7 +6,7 @@ from discord.ext import commands
 import time
 import os
 
-token = $DISCORD_BOT_TOKEN
+token = ODEzMzI3NzcyMTUxODQwODE4.YDNsgw.0qXEQZFYUnSsHW4M4vdYONEg2jE
 
 twitterID = [
     612473, #BBC News
@@ -53,4 +53,4 @@ async def here(ctx):
         print(time.asctime(time.localtime()) + ": \n" + str(tweets) + '\n' + str(videos))
         time.sleep(30)
 
-client.run(ODEzMzI3NzcyMTUxODQwODE4.YDNsgw.0qXEQZFYUnSsHW4M4vdYONEg2jE)
+client.run(token)
