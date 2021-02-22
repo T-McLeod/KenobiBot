@@ -6,7 +6,7 @@ from discord.ext import commands
 import time
 import os
 
-token = ODEzMzI3NzcyMTUxODQwODE4.YDNsgw.0qXEQZFYUnSsHW4M4vdYONEg2jE
+token = 'ODEzMzI3NzcyMTUxODQwODE4.YDNsgw.0qXEQZFYUnSsHW4M4vdYONEg2jE'
 
 twitterID = [
     612473, #BBC News
