@@ -22,7 +22,10 @@ def getVideo(channel):
 
     link = 'https://www.googleapis.com/youtube/v3/playlistItems?playlistId={upload}&key={API}&part=contentDetails&maxResults=1'
     response = requests.get(link.format(upload = uploadID, API = key)).json()
-    video = response['items'][0]['contentDetails']
+    try:
+        video = response['items'][0]['contentDetails']
+    except:
+        print(response)
     try:
         if(ID[channel] == video['videoPublishedAt']):
             return None
