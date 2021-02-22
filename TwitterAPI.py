@@ -42,7 +42,10 @@ def getTweets(userID):
 def getTwitter(users):
     final = []
     for user in users:
-        tweets = getTweets(user)
+        try:
+            tweets = getTweets(user)
+        except:
+            pass
         for tweet in tweets:
             final.append(tweet)
     return final
