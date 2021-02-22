@@ -1,1 +1,1 @@
-worker: python bot/main.py
+worker: python bot/KenobiBot.py
