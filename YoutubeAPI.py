@@ -18,7 +18,6 @@ def jprint(obj):
 def getVideo(channel):
     link = 'https://www.googleapis.com/youtube/v3/channels?id={channelID}&key={APIkey}&part=contentDetails'
     response = requests.get(link.format(channelID = channel, APIkey = key)).json()
-    #response = requests.get('https://www.googleapis.com/youtube/v3/channels?id=UC6bVUQukuALUH4qXC2HhWMA&key=AIzaSyC8S-L4JatFTKJLOP6sKRdgTjKmkkbbr5w&part=contentDetails')
     uploadID = response['items'][0]['contentDetails']['relatedPlaylists']['uploads']
 
     link = 'https://www.googleapis.com/youtube/v3/playlistItems?playlistId={upload}&key={API}&part=contentDetails&maxResults=1'
