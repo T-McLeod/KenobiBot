@@ -39,10 +39,13 @@ def getVideo(channel):
 
 def getYoutube(users):
     final = []
-    for user in users:
-        video = getVideo(user)
-        if video!=None:
-            final.append(video)
+    try:
+        for user in users:
+            video = getVideo(user)
+            if video!=None:
+                final.append(video)
+    except:
+        pass
     return final
 
 #AIzaSyC8S-L4JatFTKJLOP6sKRdgTjKmkkbbr5w
