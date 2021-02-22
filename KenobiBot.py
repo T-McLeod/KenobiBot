@@ -4,6 +4,7 @@ import discord
 import logging
 from discord.ext import commands
 import time
+import os
 
 
 
@@ -33,6 +34,7 @@ def sillyLogStuff():
 
 sillyLogStuff()
 client = commands.Bot(command_prefix = '$')
+token = os.getenv("DISCORD_BOT_TOKEN")
 
 @client.event
 async def on_ready():
@@ -52,4 +54,4 @@ async def here(ctx):
         print(time.asctime(time.localtime()) + ": \n" + str(tweets) + '\n' + str(videos))
         time.sleep(30)
 
-client.run($DiscordToken)
+client.run(token)
