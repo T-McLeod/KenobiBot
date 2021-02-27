@@ -51,6 +51,6 @@ async def here(ctx):
         for video in videos:
             await ctx.send('https://www.youtube.com/watch?v={ID}'.format(ID = video))
         print(time.asctime(time.localtime()) + ": \n" + str(tweets) + '\n' + str(videos))
-        time.sleep(30)
+        time.sleep(25)
 
 client.run(token)
