@@ -5,8 +5,11 @@ import logging
 from discord.ext import commands
 import time
 import os
+import os
+from dotenv import load_dotenv
 
-token = 'ODEzMzI3NzcyMTUxODQwODE4.YDNsgw.0qXEQZFYUnSsHW4M4vdYONEg2jE'
+load_dotenv()
+token = os.getenv("DISCORD_API_KEY")
 
 twitterID = [
     612473, #BBC News

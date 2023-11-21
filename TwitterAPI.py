@@ -1,20 +1,27 @@
 import requests
 import json
 import ast
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+key = os.getenv("TWITTER_API_KEY")
 
 headers = {
-    'Authorization': 'Bearer AAAAAAAAAAAAAAAAAAAAAOqPMwEAAAAAd7QMdV%2FlXFY%2Fi73u6KZ3zCBrSyw%3DXZlLQc7jT0zaz7WB8l0KWj167oKgmqVM6qVrGSpul2AS9rKlVS',
+    'Authorization': 'Bearer ' + key,
 }
 
 location = 'TwitterIDs.txt'
-file = open(location,"r+")
+file = open(location, "r+")
 ID = ast.literal_eval(file.read())
 file.close()
+
 
 def jprint(obj):
     # create a formatted string of the Python JSON object
     text = json.dumps(obj, sort_keys=True, indent=4)
     print(text)
+
 
 def getTweets(userID):
     lastMessage = ID[str(userID)]
@@ -28,7 +35,7 @@ def getTweets(userID):
     except:
         return []
 
-    if len(tweets)>0:
+    if len(tweets) > 0:
         ID[str(userID)] = tweets[0]['id']
         file = open(location, "w+")
         file.write(json.dumps(ID))
@@ -38,6 +45,7 @@ def getTweets(userID):
         for tweet in tweets:
             final.append(tweet['id'])
         return final
+    
 
 def getTwitter(users):
     final = []
@@ -50,5 +58,3 @@ def getTwitter(users):
             final.append(tweet)
     return final
 
-#print(getTweets(98047213))
-#AAAAAAAAAAAAAAAAAAAAAOqPMwEAAAAAd7QMdV%2FlXFY%2Fi73u6KZ3zCBrSyw%3DXZlLQc7jT0zaz7WB8l0KWj167oKgmqVM6qVrGSpul2AS9rKlVS

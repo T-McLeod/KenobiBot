@@ -2,8 +2,11 @@ import requests
 import json
 import requests
 import ast
+import os
+from dotenv import load_dotenv
 
-key = 'AIzaSyC8S-L4JatFTKJLOP6sKRdgTjKmkkbbr5w'
+load_dotenv()
+key = os.getenv("YOUTUBE_API_KEY")
 
 location = 'YoutubeIDs.txt'
 file = open(location,"r+")
